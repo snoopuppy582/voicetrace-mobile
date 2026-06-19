@@ -70,6 +70,15 @@
   - `05_스토어등록_이미지/screenshots_phone/04_caveat_1080x1920.png`
 - `imagegen`으로 생성한 feature graphic 배경을 프로젝트 폴더에 복사하고, 텍스트·아이콘·스크린샷은 Play 등록 규격에 맞춰 로컬 렌더링했다.
 - Expo 기본 아이콘을 백업한 뒤 `voicetrace-mobile/assets/`의 앱 아이콘, 스플래시, Android adaptive icon 자산을 VoiceTrace AI 브랜드 이미지로 교체했다.
+- 프로토타입 추가 개선:
+  - FastAPI `/health`가 `version`, `ffmpeg_available`, `max_upload_mb`를 반환하도록 개선.
+  - 로컬 웹 데모가 FastAPI `/analyze`로 실제 파일 업로드 분석을 실행하도록 개선.
+  - 웹 데모 연동을 위해 FastAPI localhost CORS 설정 추가.
+  - 24-bit PCM WAV 분석 호환성 추가.
+  - API 서버 unittest 7개 추가.
+  - GitHub 저장소에 모바일 앱뿐 아니라 `server/`, `web-demo/`, `docs/API_CONTRACT.md`를 포함.
+- 사용자 직접 작업용 체크리스트 추가:
+  - `PROTOTYPE_IMPROVEMENT_CHECKLIST.md`
 
 ### 에이전트 조사 결과 반영
 
@@ -97,6 +106,8 @@
 - `npx expo-doctor`: 21/21 통과.
 - `npx expo export --platform android --output-dir dist-android`: Android JS 번들 생성 성공.
 - `python -m py_compile app/main.py app/audio_analysis.py app/__init__.py`: FastAPI 코드 문법 검증 성공.
+- `python -m unittest discover -s tests`: API/오디오 분석 테스트 7개 통과.
+- `node --check app.js`: 웹 데모 JavaScript 문법 검증 통과.
 - FastAPI `POST /analyze` 테스트:
   - WAV 샘플 업로드 200 응답 확인.
   - MP3 샘플 업로드 200 응답 확인.

@@ -1,6 +1,6 @@
-# VoiceTrace AI Mobile
+# VoiceTrace AI Prototype
 
-React Native/Expo 기반 VoiceTrace AI 모바일 MVP입니다. 이 앱은 생성형 AI 영상 또는 음성 파일을 선택하고, 제작자용 음성 품질 리포트를 확인하는 흐름을 시연합니다.
+생성형 AI 영상 또는 음성 파일을 업로드 전 점검하는 제작자용 품질 리포트 프로토타입입니다. React Native/Expo 모바일 앱, FastAPI 분석 서버, 브라우저 웹 데모를 함께 포함합니다.
 
 ## 현재 구현 범위
 
@@ -10,6 +10,8 @@ React Native/Expo 기반 VoiceTrace AI 모바일 MVP입니다. 이 앱은 생성
 - HNR, HF ratio, Upload readiness 서버 지표 표시
 - 잡음 리스크와 개선 제안 카드 표시
 - 파일이 없을 때는 데모 리포트로 UI 흐름 확인
+- `server/`: FastAPI 분석 서버와 unittest
+- `web-demo/`: 브라우저에서 바로 여는 데모 화면. 서버가 켜져 있으면 실제 `/analyze` 업로드 분석도 실행
 
 ## 실행
 
@@ -27,12 +29,26 @@ npm run android
 서버는 별도 터미널에서 실행합니다.
 
 ```bash
-cd ..\voicetrace-api
+cd server
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
 Android 에뮬레이터는 기본값 `http://10.0.2.2:8000`으로 PC의 FastAPI 서버에 접근합니다. 실제 휴대폰에서 Expo Go로 테스트할 때는 앱의 서버 주소 입력칸에 PC의 같은 와이파이 IP를 넣어야 합니다.
+
+웹 데모는 `web-demo/index.html`을 브라우저에서 열면 됩니다. FastAPI 서버를 켠 상태에서 파일을 선택하면 실제 분석 요청을 보내고, 파일이 없으면 데모 샘플로 시연합니다.
+
+## 검증
+
+```bash
+npx expo-doctor
+npx expo export --platform android --output-dir dist-android
+cd server
+python -m py_compile app/main.py app/audio_analysis.py app/__init__.py
+python -m unittest discover -s tests
+cd ..\web-demo
+node --check app.js
+```
 
 ## 빌드 계획
 

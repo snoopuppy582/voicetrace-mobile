@@ -18,9 +18,11 @@
 - FastAPI 분석 서버 소스
 - Google Play 등록용 아이콘, feature graphic, 휴대폰 스크린샷 4장
 - 제품 명세, 빌드 노트, 스토어 등록 문구, 개인정보처리방침 초안
+- 프로토타입 개선·점검 체크리스트: `PROTOTYPE_IMPROVEMENT_CHECKLIST.md`
 
 ## 확인 메모
 
 - `humanize-korean` 윤문은 이전 작업에서 완료했고, 최종 보고서에는 스토어 이미지 준비 내용만 추가 반영했다.
 - 현재 PC에 Android 기기/에뮬레이터가 연결되어 있지 않아 실제 `adb screencap` 촬영은 하지 못했다.
 - 기존 APK/AAB는 오전 빌드 산출물이다. 앱 설치 아이콘까지 새 브랜드 아이콘으로 반영하려면 EAS 빌드를 한 번 더 실행하면 된다.
+- GitHub 저장소에는 모바일 앱, FastAPI 서버 복사본, 웹 데모, 스토어 이미지, 제출 문서가 함께 들어 있다.

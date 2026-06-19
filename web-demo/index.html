@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VoiceTrace AI</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">AI 실감미디어 음성 분석</p>
+          <h1>VoiceTrace AI</h1>
+          <p class="lead">
+            생성형 영상 속 인물 음성이 자연스럽게 들리는지<br />
+            HNR과 HF ratio 기준으로 진단하고,<br />
+            제작자가 바로 이해할 수 있는<br />
+            품질 리포트로 정리합니다.
+          </p>
+        </div>
+        <div class="signal-panel" aria-label="음성 파형 시각화">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="control-panel">
+          <h2>분석 입력</h2>
+          <label for="sample">데모 샘플</label>
+          <select id="sample">
+            <option value="human">인간 발화 기준 샘플</option>
+            <option value="ai-balanced">AI 생성 음성 - 안정적</option>
+            <option value="ai-noisy">AI 생성 음성 - 잡음 의심</option>
+            <option value="ai-bright">AI 생성 음성 - 고주파 과다</option>
+          </select>
+
+          <label for="apiBase">FastAPI 서버 주소</label>
+          <input id="apiBase" type="url" value="http://127.0.0.1:8000" />
+
+          <label for="file">음성 파일 선택</label>
+          <input id="file" type="file" accept="audio/*,video/*" />
+          <p class="hint">파일을 선택하면 서버의 `/analyze`로 업로드합니다. 파일이 없으면 선택한 데모 샘플로 시연합니다.</p>
+
+          <button id="analyze" type="button">분석 리포트 생성</button>
+          <p id="status" class="status">서버 분석을 하려면 FastAPI 서버를 먼저 실행하세요.</p>
+        </aside>
+
+        <section class="result-panel" aria-live="polite">
+          <div class="summary-strip">
+            <div>
+              <span class="label">HNR</span>
+              <strong id="hnr">-</strong>
+            </div>
+            <div>
+              <span class="label">HF ratio</span>
+              <strong id="hf">-</strong>
+            </div>
+            <div>
+              <span class="label">판정</span>
+              <strong id="badge">대기</strong>
+            </div>
+          </div>
+
+          <canvas id="chart" width="920" height="280" aria-label="음성 지표 그래프"></canvas>
+
+          <article class="report">
+            <h2>제작자용 리포트</h2>
+            <p id="filename">선택된 파일 없음</p>
+            <p id="reportText">
+              데모 샘플을 선택하고 분석 리포트를 생성하면 음성 품질 요약이 표시됩니다.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

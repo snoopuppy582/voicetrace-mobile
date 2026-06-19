@@ -52,6 +52,8 @@ $env:EAS_NO_VCS='1'
 
 - `npx expo-doctor`: 21/21 통과.
 - `npx expo export --platform android --output-dir dist-android`: Android JS 번들 생성 성공.
+- `python -m unittest discover -s tests`: FastAPI 분석 서버 테스트 7개 통과.
+- `node --check app.js`: 정적 웹 데모 JavaScript 문법 검증 통과.
 - Preview APK와 production AAB 모두 EAS Build 성공.
 - 현재 PC에 `adb devices`로 연결된 Android 기기/에뮬레이터가 없어 실제 설치 실행 테스트는 아직 못 했다.
 
