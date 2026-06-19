@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "voicetrace-mobile",
+    "name": "VoiceTrace AI",
     "slug": "voicetrace-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,15 +10,27 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.snoopuppy582.voicetraceai",
+      "versionCode": 2,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": []
     },
+    "plugins": [
+      "expo-document-picker"
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "45e6911d-ef1b-4939-8d08-8a5ce5e0080f"
+      }
+    },
+    "owner": "snoopy554"
   }
 }
