@@ -6,7 +6,7 @@
 - 내부 테스트/카톡 공유용 APK 생성: `02_최종본/문건호_VoiceTraceAI_preview.apk`
 - Android package: `com.snoopuppy582.voicetraceai`
 - Version: `1.0.0`
-- Version code: `2`
+- Version code: `3`
 - EAS project: https://expo.dev/accounts/snoopy554/projects/voicetrace-mobile
 - 앱 기능 설명 초안: `STORE_LISTING_DRAFT.md`
 - 개인정보처리방침 초안: `PRIVACY_POLICY_DRAFT.md`
@@ -67,5 +67,4 @@
 - 프로덕션 서버 HTTPS 배포
 - 개인정보처리방침 URL 공개
 - 실제 Android 기기 또는 에뮬레이터에서 앱 설치 후 스크린샷 교체 여부 확인
-- 새 아이콘이 반영된 APK/AAB 재빌드 여부 확인
 - Play Console 내부 테스트 제출

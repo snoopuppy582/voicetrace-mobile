@@ -70,6 +70,10 @@
   - `05_스토어등록_이미지/screenshots_phone/04_caveat_1080x1920.png`
 - `imagegen`으로 생성한 feature graphic 배경을 프로젝트 폴더에 복사하고, 텍스트·아이콘·스크린샷은 Play 등록 규격에 맞춰 로컬 렌더링했다.
 - Expo 기본 아이콘을 백업한 뒤 `voicetrace-mobile/assets/`의 앱 아이콘, 스플래시, Android adaptive icon 자산을 VoiceTrace AI 브랜드 이미지로 교체했다.
+- 새 브랜드 아이콘 반영 후 EAS 재빌드 완료:
+  - Preview APK Build ID: `fa6f498e-8936-4b5e-9527-653115333127`
+  - Production AAB Build ID: `21af7cd5-fdbd-4592-9b44-9640e30260ac`
+  - Production AAB App build version: `3`
 - 프로토타입 추가 개선:
   - FastAPI `/health`가 `version`, `ffmpeg_available`, `max_upload_mb`를 반환하도록 개선.
   - 로컬 웹 데모가 FastAPI `/analyze`로 실제 파일 업로드 분석을 실행하도록 개선.
@@ -99,7 +103,6 @@
 - 프로덕션 서버 HTTPS 배포.
 - 개인정보처리방침 초안을 실제 공개 URL에 게시.
 - Google Play Console 내부 테스트 트랙에 AAB 업로드.
-- 새 아이콘이 반영된 APK/AAB 재빌드 여부 확인.
 
 ### 검증
 
