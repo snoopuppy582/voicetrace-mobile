@@ -19,6 +19,7 @@
 - Google Play 등록용 아이콘, feature graphic, 휴대폰 스크린샷 4장
 - 제품 명세, 빌드 노트, 스토어 등록 문구, 개인정보처리방침 초안
 - 프로토타입 개선·점검 체크리스트: `PROTOTYPE_IMPROVEMENT_CHECKLIST.md`
+- Play Console 빠른 입력 가이드: `PLAY_CONSOLE_QUICK_GUIDE.md`
 
 ## 확인 메모
 
@@ -26,3 +27,4 @@
 - 현재 PC에 Android 기기/에뮬레이터가 연결되어 있지 않아 실제 `adb screencap` 촬영은 하지 못했다.
 - APK/AAB는 새 브랜드 아이콘 반영 후 다시 빌드한 산출물이다. production AAB의 versionCode는 `3`이다.
 - GitHub 저장소에는 모바일 앱, FastAPI 서버 복사본, 웹 데모, 스토어 이미지, 제출 문서가 함께 들어 있다.
+- 개인정보처리방침 URL: https://snoopuppy582.github.io/voicetrace-mobile/privacy-policy.html

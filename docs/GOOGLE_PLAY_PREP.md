@@ -10,6 +10,8 @@
 - EAS project: https://expo.dev/accounts/snoopy554/projects/voicetrace-mobile
 - 앱 기능 설명 초안: `STORE_LISTING_DRAFT.md`
 - 개인정보처리방침 초안: `PRIVACY_POLICY_DRAFT.md`
+- 개인정보처리방침 공개 URL: https://snoopuppy582.github.io/voicetrace-mobile/privacy-policy.html
+- Play Console 빠른 입력 가이드: `PLAY_CONSOLE_QUICK_GUIDE.md`
 - 앱 아이콘 512x512: `05_스토어등록_이미지/icons/play_icon_512.png`
 - Feature graphic 1024x500: `05_스토어등록_이미지/feature_graphic/feature_graphic_1024x500.png`
 - 휴대전화 스크린샷 4장: `05_스토어등록_이미지/screenshots_phone/`
@@ -37,8 +39,8 @@
    - 필요하면 태블릿 스크린샷 추가
 
 4. 개인정보처리방침 URL 등록
-   - `PRIVACY_POLICY_DRAFT.md`를 GitHub Pages, Notion 공개 페이지, Google Sites 등 URL이 있는 곳에 게시
-   - Play Console의 App content > Privacy policy에 URL 입력
+   - Play Console의 App content > Privacy policy에 아래 URL 입력
+   - https://snoopuppy582.github.io/voicetrace-mobile/privacy-policy.html
 
 5. Data Safety Form 작성
    - 사용자가 선택한 오디오/비디오 파일은 분석 서버로 전송됨
@@ -65,6 +67,5 @@
 
 - 실제 Android 기기에서 APK 설치 후 서버 주소 입력, 파일 업로드, 결과 표시 확인
 - 프로덕션 서버 HTTPS 배포
-- 개인정보처리방침 URL 공개
 - 실제 Android 기기 또는 에뮬레이터에서 앱 설치 후 스크린샷 교체 여부 확인
 - Play Console 내부 테스트 제출
